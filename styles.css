@@ -10,10 +10,10 @@
 
 :root {
     /* Color Scheme - Pink Theme */
-    --primary-gradient: linear-gradient(135deg, #00ffaa, #00ffaa);
+    --primary-gradient: linear-gradient(135deg, #ffffff, #01f7ff);
     --secondary-gradient: linear-gradient(135deg, #ffc0cb, #ffb6c1);
     --danger-gradient: linear-gradient(135deg, #ff69b4, #ff1493);
-    --success-gradient: linear-gradient(135deg, #00ff95, #00ffaa);
+    --success-gradient: linear-gradient(135deg, #ffffff, #00eeff);
     --background-gradient: linear-gradient(135deg, #ff1493, #ff1493, #ff1493);
     --card-gradient: linear-gradient(rgba(255, 192, 203, 0.05), rgba(255, 182, 193, 0.01));
     --hover-gradient: linear-gradient(135deg, #ffeef2, #ffe4e8);
@@ -32,11 +32,11 @@
 
 body {
     min-height: 100vh;
-    background: var(--background-gradient);
+    background: rgb(0, 187, 255);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #4a4a4a;
+    color: #ffffff;
     padding: 20px;
     background-size: 200% 200%;
     animation: gradientBG 15s ease infinite;
@@ -52,7 +52,7 @@ body {
     border-radius: 30px;
     padding: 40px;
     box-shadow: var(--card-shadow);
-    border: 1px solid rgba(255, 192, 203, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease;
 }
 
@@ -79,14 +79,14 @@ body {
 .header h1 {
     font-size: 2.5em;
     font-weight: 800;
-    color: #ff69b4;
+    color: #ffffff;
     margin-bottom: 15px;
     letter-spacing: -0.5px;
 }
 
 /* Warning Banner */
 .warning {
-    background: var(--danger-gradient);
+    background: rgb(0, 213, 255);
     padding: 15px 25px;
     border-radius: 15px;
     margin-bottom: 30px;
@@ -101,7 +101,7 @@ body {
     box-shadow: var(--button-shadow);
     text-transform: uppercase;
     transition: transform 0.3s ease;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .warning:hover {
@@ -185,14 +185,14 @@ body {
 
 .payment-logo i {
     font-size: 24px;
-    color: #ff69b4;
+    color: #000000;
     z-index: 1;
 }
 
 .payment-info h3 {
     font-size: 1.3em;
     font-weight: 700;
-    color: #ff69b4;
+    color: #000000;
     margin-bottom: 5px;
 }
 
@@ -202,7 +202,7 @@ body {
 }
 
 .payment-details p {
-    color: #666;
+    color: #000000;
     font-size: 1.1em;
     margin: 8px 0;
     font-weight: 500;
@@ -287,7 +287,7 @@ body {
     font-size: 1.5em;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #ff69b4;
+    color: #000000;
 }
 
 .contact-button {
@@ -297,7 +297,7 @@ body {
     background: var(--primary-gradient);
     padding: 15px 30px;
     border-radius: 25px;
-    color: #4a4a4a;
+    color: #000000;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1em;
@@ -318,7 +318,7 @@ body {
     top: 20px;
     right: 20px;
     background: rgba(255, 255, 255, 0.95);
-    color: #4a4a4a;
+    color: #000000;
     padding: 15px 25px;
     border-radius: 15px;
     display: flex;
@@ -330,7 +330,7 @@ body {
     z-index: 1000;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 192, 203, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .toast.show {
@@ -460,7 +460,7 @@ body {
     border: none;
     padding: 12px 20px;
     border-radius: 25px;
-    color: #4a4a4a;
+    color: #000000;
     font-weight: 600;
     cursor: pointer;
     display: flex;
