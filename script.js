@@ -217,7 +217,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 function downloadQRIS() {
     const qrisImage = document.getElementById('qris-image');
     const link = document.createElement('a');
-    link.href = qrisImage.src;
+    link.href = qrisImage.src = "qris.jpg;
     link.download = 'qris.jpg';
     document.body.appendChild(link);
     link.click();
