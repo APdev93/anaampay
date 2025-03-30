@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pay OnlyCylaaa</title>
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Premium Payment Gateway for secure transactions - Only Cyla">
     <meta name="keywords" content="payment gateway, DANA, ShopeePay, Seabank, secure payments">
     <meta name="author" content="Cylaa">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Security Headers -->
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-    
+
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
-        <div class="header">
+        <header class="header">
             <h1>Only Cylaa</h1>
-        </div>
+        </header>
 
-        <div class="warning">
+        <section class="warning">
             <i class="fas fa-shield-alt"></i>
             Telegram @OnlyCylaaa
             <i class="fas fa-shield-alt"></i>
-        </div>
+        </section>
 
-        <div class="payment-grid">
-
+        <section class="payment-grid">
+            <!-- Payment Methods -->
             <div class="payment-method qris-method" data-method="qris">
-                <div class="payment-header">
-                    <div class="payment-info">
-                        <h3>DANA</h3>
-                    </div>
-                </div>
+                <h3>DANA</h3>
                 <div class="qris-image-container">
-                    <img src="https://github.com/anamnich/pay/raw/refs/heads/main/IMG_0434.jpg" 
-                         alt="QRIS Code" 
-                         class="qris-image"
-                         id="qris-image"
-                         loading="lazy">
+                    <img src="https://github.com/anamnich/pay/raw/refs/heads/main/IMG_0434.jpg" alt="QRIS Code" class="qris-image" loading="lazy">
                 </div>
                 <div class="status-badge ready">
                     <i class="fas fa-check-circle"></i> READY
@@ -55,92 +49,11 @@
                     <i class="fas fa-download"></i> Download QRIS
                 </button>
             </div>
-        </div>
 
-        <div class="payment-method qris-method" data-method="qris">
-            <div class="payment-header">
-                <div class="payment-info">
-                    <h3>GOPAY</h3>
-                </div>
-            </div>
-            <div class="qris-image-container">
-                <img src="https://github.com/anamnich/pay/raw/refs/heads/main/IMG_0433.jpg" 
-                     alt="QRIS Code" 
-                     class="qris-image"
-                     id="qris-image"
-                     loading="lazy">
-            </div>
-            <div class="status-badge ready">
-                <i class="fas fa-check-circle"></i> READY
-            </div>
-            <button class="download-btn" onclick="downloadQRIS()">
-                <i class="fas fa-download"></i> Download QRIS
-            </button>
-        </div>
-    </div>
-
-<div class="payment-method qris-method" data-method="qris">
-    <div class="payment-header">
-        <div class="payment-info">
-            <h3>SHOPEE</h3>
-        </div>
-    </div>
-    <div class="qris-image-container">
-        <img src="https://github.com/anamnich/pay/raw/refs/heads/IMG_0435.jpg" 
-             alt="QRIS Code" 
-             class="qris-image"
-             id="qris-image"
-             loading="lazy">
-    </div>
-    <div class="status-badge ready">
-        <i class="fas fa-check-circle"></i> READY
-    </div>
-    <button class="download-btn" onclick="downloadQRIS()">
-        <i class="fas fa-download"></i> Download QRIS
-    </button>
-</div>
-</div>
-            <!-- DANA -->
-            <!-- <div class="payment-method" data-method="dana">
-                <div class="payment-header">
-                    <div class="payment-logo">
-                        <img src="https://raw.githubusercontent.com/Muhammadabid7/ciee-ekhem/refs/heads/main/images.jpeg" 
-                             alt="Dana" 
-                             loading="lazy"
-                             style="background-color: rgb(255, 255, 255); padding: 2px;">
-
-                    </div>
-                    <div class="payment-info">
-                        <h3>DANA</h3>
-                    </div>
-                </div>
-                <div class="payment-details">
-                    <p>085147736767</p>
-                    <p>A/N R.A</p>
-                </div>
-                <div class="status-badge ready">
-                    <i class="fas fa-check-circle"></i> READY
-                </div>
-                <button class="copy-btn" onclick="copyToClipboard('085147736767')">
-                    <i class="far fa-copy"></i> Copy Number
-                </button>
-            </div> --!>
-
-            
-
-            <!-- QRIS ALL PAYMENT -->
             <div class="payment-method qris-method" data-method="qris">
-                <div class="payment-header">
-                    <div class="payment-info">
-                        <h3>QRIS ALL PAYMENT</h3>
-                    </div>
-                </div>
+                <h3>GOPAY</h3>
                 <div class="qris-image-container">
-                    <img src="https://github.com/anamnich/pay/raw/refs/heads/main/IMG_20250322_051336_897.jpg" 
-                         alt="QRIS Code" 
-                         class="qris-image"
-                         id="qris-image"
-                         loading="lazy">
+                    <img src="https://github.com/anamnich/pay/raw/refs/heads/main/IMG_0433.jpg" alt="QRIS Code" class="qris-image" loading="lazy">
                 </div>
                 <div class="status-badge ready">
                     <i class="fas fa-check-circle"></i> READY
@@ -149,15 +62,41 @@
                     <i class="fas fa-download"></i> Download QRIS
                 </button>
             </div>
-        </div>
 
-        <div class="contact-section">
+            <div class="payment-method qris-method" data-method="qris">
+                <h3>SHOPEE</h3>
+                <div class="qris-image-container">
+                    <img src="https://github.com/anamnich/pay/raw/refs/heads/IMG_0435.jpg" alt="QRIS Code" class="qris-image" loading="lazy">
+                </div>
+                <div class="status-badge ready">
+                    <i class="fas fa-check-circle"></i> READY
+                </div>
+                <button class="download-btn" onclick="downloadQRIS()">
+                    <i class="fas fa-download"></i> Download QRIS
+                </button>
+            </div>
+
+            <div class="payment-method qris-method" data-method="qris">
+                <h3>QRIS ALL PAYMENT</h3>
+                <div class="qris-image-container">
+                    <img src="https://github.com/anamnich/pay/raw/refs/heads/main/IMG_20250322_051336_897.jpg" alt="QRIS Code" class="qris-image" loading="lazy">
+                </div>
+                <div class="status-badge ready">
+                    <i class="fas fa-check-circle"></i> READY
+                </div>
+                <button class="download-btn" onclick="downloadQRIS()">
+                    <i class="fas fa-download"></i> Download QRIS
+                </button>
+            </div>
+        </section>
+
+        <section class="contact-section">
             <h2 class="contact-title">OFFICIAL CHANNEL</h2>
             <a href="https://t.me/stokcyl" class="contact-button" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-telegram-plane"></i>
                 @stokcyl
             </a>
-        </div>
+        </section>
     </div>
 
     <div class="toast" id="toast">
@@ -167,4 +106,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
