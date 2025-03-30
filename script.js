@@ -33,15 +33,15 @@ async function copyToClipboard(text) {
             fallbackCopyToClipboard(text);
             return;
         }
-        
+
         await navigator.clipboard.writeText(text);
         showToast('Successfully copied to clipboard!', 'success');
-        
+
         // Animate the copy button
         const button = event.currentTarget;
         button.classList.add('copying');
         setTimeout(() => button.classList.remove('copying'), 1000);
-        
+
     } catch (err) {
         console.error('Failed to copy:', err);
         showToast('Failed to copy. Please try again.', 'error');
@@ -55,7 +55,7 @@ function fallbackCopyToClipboard(text) {
     textArea.style.position = 'fixed';
     textArea.style.left = '-9999px';
     document.body.appendChild(textArea);
-    
+
     try {
         textArea.select();
         document.execCommand('copy');
@@ -64,7 +64,7 @@ function fallbackCopyToClipboard(text) {
         console.error('Fallback copy failed:', err);
         showToast('Failed to copy. Please try again.', 'error');
     }
-    
+
     document.body.removeChild(textArea);
 }
 
@@ -73,17 +73,17 @@ function showToast(message, type = 'success') {
     const toast = document.getElementById('toast');
     const icon = toast.querySelector('i');
     const messageSpan = toast.querySelector('span');
-    
+
     // Update toast content
     messageSpan.textContent = message;
-    
+
     // Update toast style based on type
     toast.className = `toast ${type}`;
     icon.className = type === 'success' ? 'fas fa-check-circle' : 'fas fa-times-circle';
-    
+
     // Show toast with animation
     toast.classList.add('show');
-    
+
     // Hide toast after duration
     setTimeout(() => {
         toast.classList.remove('show');
@@ -96,7 +96,7 @@ paymentMethods.forEach(method => {
         method.style.transform = 'translateY(-10px) scale(1.02)';
         method.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 255, 242, 0.3)';
     });
-    
+
     method.addEventListener('mouseleave', () => {
         method.style.transform = 'translateY(0) scale(1)';
         method.style.boxShadow = 'var(--neon-blue)';
@@ -129,12 +129,12 @@ class ParticleEffect {
         this.particles = [];
         this.mouseX = 0;
         this.mouseY = 0;
-        
+
         this.initializeParticles();
         this.attachEventListeners();
         this.animate();
     }
-    
+
     initializeParticles() {
         // Initialize particle system
         for (let i = 0; i < 50; i++) {
@@ -147,24 +147,24 @@ class ParticleEffect {
             });
         }
     }
-    
+
     attachEventListeners() {
         document.addEventListener('mousemove', (e) => {
             this.mouseX = e.clientX;
             this.mouseY = e.clientY;
         });
     }
-    
+
     animate() {
         requestAnimationFrame(() => this.animate());
         this.updateParticles();
     }
-    
+
     updateParticles() {
         this.particles.forEach(particle => {
             particle.x += particle.speedX;
             particle.y += particle.speedY;
-            
+
             // Wrap particles around screen
             if (particle.x > window.innerWidth) particle.x = 0;
             if (particle.x < 0) particle.x = window.innerWidth;
@@ -178,7 +178,7 @@ class ParticleEffect {
 const particleEffect = new ParticleEffect();
 
 // Error Handler
-window.onerror = function(msg, url, lineNo, columnNo, error) {
+window.onerror = function (msg, url, lineNo, columnNo, error) {
     console.error('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + lineNo + '\nColumn: ' + columnNo + '\nError object: ' + JSON.stringify(error));
     return false;
 };
@@ -198,14 +198,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
-        
+
         images.forEach(img => imageObserver.observe(img));
     }
 });
 
 // Add smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
@@ -218,7 +218,40 @@ function downloadQRIS() {
     const qrisImage = document.getElementById('qris-image');
     const link = document.createElement('a');
     link.href = qrisImage.src;
-    link.download = 'QRIS-JB-NIYAYA.jpg';
+    link.download = 'qris.jpg';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    showToast('QRIS image downloading...', 'success');
+}
+
+function downloadQRISdana() {
+    const qrisdanaImage = document.getElementById('qris-image');
+    const link = document.createElement('a');
+    link.href = qrisdanaImage.src;
+    link.download = 'dana.jpg';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    showToast('QRIS image downloading...', 'success');
+}
+
+function downloadQRISgopay() {
+    const qrisgopayImage = document.getElementById('qris-image');
+    const link = document.createElement('a');
+    link.href = qrisgopayImage.src;
+    link.download = 'gopay.jpg';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    showToast('QRIS image downloading...', 'success');
+}
+
+function downloadQRISshope() {
+    const qrisshopeImage = document.getElementById('qris-image');
+    const link = document.createElement('a');
+    link.href = qrisshopeImage.src;
+    link.download = 'shope.jpg';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
